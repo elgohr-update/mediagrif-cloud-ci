@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Publish to Docker Hub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.9
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mediagrifdevteam/cloud-ci
           username: ${{ secrets.docker_username }}
@@ -21,7 +21,7 @@ jobs:
           tag_names: true
           snapshot: true
       - name: Publish to GitHub Registry
-        uses: elgohr/Publish-Docker-Github-Action@2.9
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: mediagrif/cloud-ci/cloud-ci
           username: ${{ secrets.username }}
